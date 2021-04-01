@@ -23,6 +23,7 @@
         <div class="details">
           <span><?php echo $row['lname']." ".$row['fname'] ?></span>
           <p><?php echo $row['status'] ?></p>
+          <p><a href="video.php?user_id=<?php echo $user_id; ?>">通話</a></p>
         </div>
       </header>
       <div class="chat-box">
