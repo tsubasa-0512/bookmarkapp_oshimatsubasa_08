@@ -33,3 +33,4 @@ chat.php：チャット画面
 
 その他
 pass-show-hide.js：会員登録・ログイン時のパスワード可視化
+chat.sql：スキーマ
