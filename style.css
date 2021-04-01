@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: #8A6BBE;
+}
+
+.wrapper {
+  background: #fff;
+  width: 450px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .form {
+  padding: 25px 30px;
+}
+
+.wrapper .form header {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper .form form {
+  margin: 20px 0;
+}
+
+.wrapper .form form .error-msg {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+  display: none;
+}
+
+.wrapper .form form .name-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .form form .name-detail .field:first-child {
+  margin-right: 10px;
+}
+
+.wrapper .form form .name-detail .field:last-child {
+  margin-left: 10px;
+}
+
+.wrapper .form form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.wrapper .form form .field label {
+  margin-bottom: 2px;
+}
+
+.wrapper .form form .field input {
+  outline: none;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.wrapper .form form .field.password {
+  position: relative;
+}
+
+.wrapper .form form .field i {
+  position: absolute;
+  right: 15px;
+  color: #ccc;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.wrapper .form form .field i.active::before {
+  content: "\f070";
+  color: #0C0C0C;
+}
+
+.wrapper .form form .field.image input {
+  font-size: 16px;
+  border-style: none;
+}
+
+.wrapper .form form .field.button input {
+  margin-top: 13px;
+  height: 45px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: #8A6BBE;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper .form .link {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.wrapper .form .link a {
+  color: #0C0C0C;
+}
+
+.wrapper .form .link a:hover {
+  text-decoration: underline;
+}
+
+.users {
+  padding: 25px 30px;
+}
+
+.users header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.users header .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.users header .content img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.users header .content .details {
+  margin-left: 15px;
+}
+
+.users header .content .details span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.users header .content .details p {
+  font-size: 14px;
+  color: #67676a;
+}
+
+.users header .logout {
+  color: #fff;
+  font-size: 16px;
+  padding: 7px 15px;
+  background: #8A6BBE;
+  border-radius: 5px;
+}
+
+.users .search {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.users .search .text {
+  font-size: 16px;
+}
+
+.users .search input {
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  padding-left: 5px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+}
+
+.users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.users .search button {
+  width: 46px;
+  height: 46px;
+  border: none;
+  outline: none;
+  color: #8A6BBE;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.users .search button.active {
+  color: #fff;
+  background: #8A6BBE;
+}
+
+.users .user-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.users .user-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.users .user-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.users .user-list a .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.users .user-list a .content img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.users .user-list a .content .details {
+  margin-left: 15px;
+}
+
+.users .user-list a .content .details span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0C0C0C;
+}
+
+.users .user-list a .content .details p {
+  font-size: 14px;
+  color: #67676a;
+}
+
+.users .user-list a .status {
+  font-size: 12px;
+  color: #5DAC81;
+}
+
+.users .user-list a .status.offline {
+  color: #ccc;
+}
+
+.users .user-list a:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+
+.chatroom header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 30px;
+}
+
+.chatroom header .back-profile {
+  font-size: 18px;
+}
+
+.chatroom header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.chatroom header .details span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chatroom .chat-box {
+  height: 500px;
+  background-color: #EAD9FF;
+  padding: 10px 30px 20px 30px;
+  overflow-y: auto;
+}
+
+.chatroom .chat-box .outgoing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+}
+
+.chatroom .chat-box .outgoing .details {
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+
+.chatroom .chat-box .outgoing .details p {
+  background: #8A6BBE;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 18px 18px 0 18px;
+  word-wrap: break-word;
+}
+
+.chatroom .chat-box .incoming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 15px 0;
+}
+
+.chatroom .chat-box .incoming img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.chatroom .chat-box .incoming .details {
+  margin-left: 10px;
+  max-width: calc(100% - 130px);
+}
+
+.chatroom .chat-box .incoming .details p {
+  color: #fff;
+  background: #8A6BBE;
+  margin-right: auto;
+  padding: 8px 16px;
+  border-radius: 18px 18px 18px 0;
+  word-wrap: break-word;
+}
+
+.chatroom .typing-area input {
+  margin: 5px;
+  height: 45px;
+  width: calc(100% - 65px);
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.chatroom .typing-area button {
+  width: 45px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #8A6BBE;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+/*# sourceMappingURL=style.css.map */
